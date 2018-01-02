@@ -1,31 +1,28 @@
-var user_id = [
-  "user0",
-  "user1",
-  "user2",
-  "user3",
-  "user4",
-  "user5",
-  "user6",
-  "user7",
-  "user8",
-  "user9"
-]
+var fs = require('fs'),
+    readline = require('readline');
 
-var elevatorposition = 10 + 9 * 80;
+var rd = readline.createInterface({
+    input: fs.createReadStream('./logfile'),
+    output: process.stdout,
+    console: false
+});
 
+var output = []
+rd.on('line', function(line) {
+  line = line.replace(/ /g,"")
+  var pre = line.split(",")
+  output.push(pre)
 
-var peoplepositionX = [
-  60, 60, 60, 60, 60, 60, 60, 60, 60, 60
-]
-
-// var peoplepositionY = [
-//   , 0, 0, 0, 0, 0, 0, 0, 0, 0
-// ]
+  console.log("here")
+});
 
 
-var floors = [750, 670, 590, 510, 430, 350, 270, 190, 110, 30]
+setTimeout(() => {
+  console.log(output)
+}, 3000);
 
-var passenger = []
+
+
 
 var todo = [
   ['elevatorwait'],

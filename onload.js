@@ -1,12 +1,10 @@
 function onload() {
   console.log("onload")
-  
-  // setelevatorposition()
-  // peopleshow(0, 0)
-  // peoplegetinelevator(0)
-  // elevatorup()
-  // elevatorup()
-  
+
+  var i = 0;
+  setInterval(() => {
+    
+  }, 1000)
 }
 
 
@@ -39,7 +37,7 @@ function elevatordown() {
 
 function elevatorup() {
   elevatorposition -= 80;
-  
+
   TweenLite.to("#elevator", 0.5, {
     marginTop: elevatorposition + 'px'
   })
