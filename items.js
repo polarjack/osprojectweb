@@ -16,7 +16,7 @@ var elevatorposition = elevatorbasic + (9-0) * 80;
 
 
 var peoplepositionX = [
-  60, 60, 60, 60, 60, 60, 60, 60, 60, 60
+  60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
 ]
 
 // var peoplepositionY = [
