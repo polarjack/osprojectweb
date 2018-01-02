@@ -1,0 +1,40 @@
+body,
+html {
+  /*max-width: 1024px;*/
+  /*height: 100%;*/
+  margin: 0px;
+  padding: 0px;
+  background-color: #EEEEEE;
+  font-family: Microsoft JhengHei !important;
+}
+
+.limit-width {
+  width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.floor {
+  width: 100%;
+  height: 77.6px;
+  border-style: hidden hidden solid hidden;
+  border-color: pink;
+}
+
+.people {
+  z-index: 10;
+  position: absolute;
+  margin-left: 60px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.elevator {
+  z-index: 5;
+  height: 67.8px;
+  opacity: 0;
+  position: absolute;
+  margin-left: 120px;
+  margin-top: 10px;
+}
