@@ -21,9 +21,7 @@ setTimeout(() => {
   console.log(output)
 }, 3000);
 
-
-
-
+//result
 var todo = [
   ['elevatorwait'],
   ['studentdown', '0', '2'],

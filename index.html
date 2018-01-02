@@ -5,7 +5,21 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./wrapper.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineLite.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/easing/EasePack.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
+  
+  <script src="./items.js"></script>
+  <script src="./onload.js"></script>
+  <script src="./todo.js"></script>
+  
 </head>
+
+
 
 <body>
   <div class="limit-width">
@@ -75,19 +89,20 @@
       <i class="material-icons" id="up0">keyboard_arrow_up</i><br>
       <i class="material-icons" id="down0">keyboard_arrow_down</i>
     </div>
+    <br>
+    <br>
+    <div style="float: right;">
+      <button class="button" onclick="myfunction()">START</button>
+    </div>
+    
   </div>
-
+  
 </body>
+<script>
+  function myfunction() {
+    onload();
+  }
+</script>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenLite.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TimelineLite.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/easing/EasePack.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/CSSPlugin.min.js"></script>
-
-<script src="./items.js"></script>
-<script src="./onload.js"></script>
-<script src="./todo.js"></script>
 
 </html>

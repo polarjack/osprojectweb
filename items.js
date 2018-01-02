@@ -11,10 +11,10 @@ var user_id = [
   "user9"
 ]
 
-var elevatorbasic = 10;
+var elevatorbasic = 12;
 var elevatorposition = elevatorbasic + (9-0) * 80;
 
-
+var elevatorcurrent = 0;
 var peoplepositionX = [
   60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
 ]

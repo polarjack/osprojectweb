@@ -1,3 +1,7 @@
+function testing() {
+  alert("hi")
+}
+
 function onload() {
   console.log("onload")
 
@@ -16,15 +20,16 @@ function onload() {
       case 'studentdown':
         var who = Number(todo[i][1])
         var floor = Number(todo[i][2])
-        peopleshow(who, floor)
+        peopleshow(who, floor, "down")
         break;
       case 'studentup':
         var who = Number(todo[i][1])
         var floor = Number(todo[i][2])
-        peopleshow(who, floor)
+        peopleshow(who, floor, "up")
         break;
       case 'elevator':
         var floor = Number(todo[i][1])
+        elevatorcurrent = floor
         elevatorgoto(floor)
         break;
       case 'studentout':
@@ -112,7 +117,7 @@ function initpeopleposition() {
   });
 }
 
-function peopleshow(id, atfloor) {
+function peopleshow(id, atfloor, action) {
 
   TweenLite.to("#people" + id, 0.1, {
     marginTop: floors[atfloor] + 'px'
@@ -121,20 +126,32 @@ function peopleshow(id, atfloor) {
     opacity: 1,
     delay: 0.1
   })
+  console.log(action)
+
+  TweenLite.to("#"+ action + atfloor, 0.1, {
+    color: 'green'
+  })
+  
+  
+
 }
 
 function peoplegetinelevator(id) {
-  peoplepositionX[id] += 70
   passenger.push(id)
   TweenLite.to("#people" + id, 0.5, {
-    marginLeft: peoplepositionX[id] + 'px'
+    marginLeft: 130 + 'px'
+  })
+  TweenLite.to("#up" + elevatorcurrent, 0.1, {
+    color: 'black'
+  })
+  TweenLite.to("#down" + elevatorcurrent, 0.1, {
+    color: 'black'
   })
 }
 
 function peoplegetoutelevator(id) {
-  peoplepositionX[id] += 40
   TweenLite.to("#people" + id, 0.5, {
-    marginLeft: peoplepositionX[id] + 'px'
+    marginLeft: 170 + 'px'
   })
   TweenLite.to("#people" + id, 0.1, {
     opacity: 0
