@@ -12,8 +12,8 @@ function onload() {
   // peoplegetinelevator(0)
   // elevatorgoto(2)
   // peoplegetoutelevator(0);
-  
-  setInterval(() => {
+  running = true;
+  setting = setInterval(() => {
     switch (todo[i][0]) {
       case 'elevatorwait':
         break;
@@ -40,12 +40,20 @@ function onload() {
         var who = Number(todo[i][1])
         peoplegetinelevator(who);
         break;
+      case 'end':
+        stopinterval()
+        break;
       default:
         console.log(todo[i])
         break;
     }
     i++
   }, 1000)
+}
+
+function stopinterval() {
+  clearInterval(setting)
+  running = false;
 }
 
 function getObject(id) {

@@ -104,5 +104,9 @@ var todo = [
   ['studentin', '10'],
   ['elevator', '1'],
   ['studentout', '10'],
-  ['elevatorwait']
+  ['elevatorwait'],
+  ['end']
 ]
+
+var setting
+var running = false

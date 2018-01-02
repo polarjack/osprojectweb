@@ -100,7 +100,12 @@
 </body>
 <script>
   function myfunction() {
-    onload();
+    if(running == false) {
+      onload();
+    }
+    else {
+      alert("Running")
+    }
   }
 </script>
 
