@@ -11,7 +11,8 @@ var user_id = [
   "user9"
 ]
 
-var elevatorposition = 10 + 9 * 80;
+var elevatorbasic = 10;
+var elevatorposition = elevatorbasic + (9-0) * 80;
 
 
 var peoplepositionX = [
@@ -27,6 +28,18 @@ var floors = [750, 670, 590, 510, 430, 350, 270, 190, 110, 30]
 
 // var floors = [30, 110, 190, 270, 350, 430, 510, 590, 670, 750]
 var passenger = []
+
+
+// var todo = [
+//   ['elevatorwait'],
+//   ['studentdown', '0', '2'],
+//   ['elevator', '2'],
+//   ['studentin', '0'],
+//   ['elevator', '0'],
+//   ['studentout', '0'],
+//   ['elevatorwait']
+// ]
+
 
 var todo = [
   ['elevatorwait'],

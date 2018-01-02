@@ -4,7 +4,11 @@ function onload() {
   var i = 0;
   console.log(todo.length)
   setelevatorposition();
-  elevatorgoto(0);
+  // peopleshow(0, 0)
+  // peoplegetinelevator(0)
+  // elevatorgoto(2)
+  // peoplegetoutelevator(0);
+  
   setInterval(() => {
     switch (todo[i][0]) {
       case 'elevatorwait':
@@ -21,7 +25,7 @@ function onload() {
         break;
       case 'elevator':
         var floor = Number(todo[i][1])
-        elevatorgoto()
+        elevatorgoto(floor)
         break;
       case 'studentout':
         var who = Number(todo[i][1])
@@ -53,45 +57,46 @@ function setelevatorposition() {
   })
 }
 
-function elevatordown() {
-  elevatorposition += 82;
+// function elevatordown() {
+//   elevatorposition += 82;
 
-  TweenLite.to("#elevator", 0.5, {
-    marginTop: elevatorposition + 'px'
-  })
-  passenger.map(i => {
-    TweenLite.to("#people" + i, 0.5, {
-      marginTop: elevatorposition + 'px'
-    })
-  })
-}
+//   TweenLite.to("#elevator", 0.5, {
+//     marginTop: elevatorposition + 'px'
+//   })
+//   passenger.map(i => {
+//     TweenLite.to("#people" + i, 0.5, {
+//       marginTop: elevatorposition + 'px'
+//     })
+//   })
+// }
 
 function elevatorgoto(floor) {
-  elevatorposition = floors[floor];
+  var positiontogo = elevatorbasic + (9-floor)* 80;
   console.log(elevatorposition)
-
+  var peopletogo = floors[floor]
+  
   TweenLite.to("#elevator", 0.5, {
-    marginTop: elevatorposition + 'px'
+    marginTop: positiontogo + 'px'
   })
   passenger.map(i => {
     TweenLite.to("#people" + i, 0.5, {
-      marginTop: elevatorposition + 'px'
+      marginTop: peopletogo + 'px'
     })
   })
 }
 
-function elevatorup() {
-  elevatorposition -= 80;
+// function elevatorup() {
+//   elevatorposition -= 80;
 
-  TweenLite.to("#elevator", 0.5, {
-    marginTop: elevatorposition + 'px'
-  })
-  passenger.map(i => {
-    TweenLite.to("#people" + i, 0.5, {
-      marginTop: elevatorposition + 'px'
-    })
-  })
-}
+//   TweenLite.to("#elevator", 0.5, {
+//     marginTop: elevatorposition + 'px'
+//   })
+//   passenger.map(i => {
+//     TweenLite.to("#people" + i, 0.5, {
+//       marginTop: elevatorposition + 'px'
+//     })
+//   })
+// }
 
 
 // function peopledown(id) {
