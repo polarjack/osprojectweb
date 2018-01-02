@@ -2,11 +2,42 @@ function onload() {
   console.log("onload")
 
   var i = 0;
+  console.log(todo.length)
+  setelevatorposition();
+  elevatorgoto(0);
   setInterval(() => {
-    
+    switch (todo[i][0]) {
+      case 'elevatorwait':
+        break;
+      case 'studentdown':
+        var who = Number(todo[i][1])
+        var floor = Number(todo[i][2])
+        peopleshow(who, floor)
+        break;
+      case 'studentup':
+        var who = Number(todo[i][1])
+        var floor = Number(todo[i][2])
+        peopleshow(who, floor)
+        break;
+      case 'elevator':
+        var floor = Number(todo[i][1])
+        elevatorgoto()
+        break;
+      case 'studentout':
+        var who = Number(todo[i][1])
+        peoplegetoutelevator(who);
+        break;
+      case 'studentin':
+        var who = Number(todo[i][1])
+        peoplegetinelevator(who);
+        break;
+      default:
+        console.log(todo[i])
+        break;
+    }
+    i++
   }, 1000)
 }
-
 
 function getObject(id) {
   return $('#' + id)
@@ -24,6 +55,20 @@ function setelevatorposition() {
 
 function elevatordown() {
   elevatorposition += 82;
+
+  TweenLite.to("#elevator", 0.5, {
+    marginTop: elevatorposition + 'px'
+  })
+  passenger.map(i => {
+    TweenLite.to("#people" + i, 0.5, {
+      marginTop: elevatorposition + 'px'
+    })
+  })
+}
+
+function elevatorgoto(floor) {
+  elevatorposition = floors[floor];
+  console.log(elevatorposition)
 
   TweenLite.to("#elevator", 0.5, {
     marginTop: elevatorposition + 'px'

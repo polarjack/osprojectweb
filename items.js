@@ -25,6 +25,7 @@ var peoplepositionX = [
 
 var floors = [750, 670, 590, 510, 430, 350, 270, 190, 110, 30]
 
+// var floors = [30, 110, 190, 270, 350, 430, 510, 590, 670, 750]
 var passenger = []
 
 var todo = [
