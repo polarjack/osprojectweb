@@ -2,7 +2,7 @@ var fs = require('fs'),
   readline = require('readline');
 
 var rd = readline.createInterface({
-  input: fs.createReadStream('./logfile'),
+  input: fs.createReadStream('./elevator.log'),
   output: process.stdout,
   console: false
 });
