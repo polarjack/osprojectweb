@@ -2,7 +2,7 @@ var fs = require('fs'),
   readline = require('readline');
 
 var rd = readline.createInterface({
-  input: fs.createReadStream('./elevator24.log'),
+  input: fs.createReadStream('./logfile'),
   output: process.stdout,
   console: false
 });
@@ -20,7 +20,7 @@ setTimeout(() => {
   var getin = ["end"]
   output.push(getin)
 
-  var file = fs.createWriteStream('elevator24.txt');
+  var file = fs.createWriteStream('result.txt');
   file.on('error', function (err) { /* error handling */ });
   output.forEach(function (v) {
     file.write('["' + v.join('","') +'"],'+ '\n');

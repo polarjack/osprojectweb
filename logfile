@@ -1,63 +1,125 @@
 elevatorwait
-studentdown, 0, 2
-elevator, 2
-studentin, 0
-elevator, 0
-studentout, 0
+studentdown, 0, 7
+elevator, 7
 elevatorwait
 studentdown, 1, 9
 elevator, 9
-studentin, 1
-elevator, 8
-studentout, 1
 elevatorwait
-studentup, 2, 1
-elevator, 1
+studentdown, 2, 7
+elevator, 7
 studentin, 2
-elevator, 3
+studentin, 0
+studentout, 0
+elevator, 6
 studentout, 2
-elevatorwait
-studentdown, 4, 7
-studentup, 3, 0
 elevator, 7
+elevatorwait
+studentup, 7, 3
+studentdown, 6, 1
+studentdown, 5, 8
+studentup, 4, 3
+studentdown, 3, 8
+elevator, 3
 studentin, 4
-elevator, 4
+elevator, 6
 studentout, 4
-elevator, 0
-studentin, 3
-elevator, 9
-studentout, 3
-elevatorwait
-studentdown, 5, 7
-studentdown, 6, 8
-elevator, 7
-studentin, 5
-elevator, 4
-studentout, 5
 elevator, 8
+studentin, 3
+studentout, 3
+studentin, 5
+elevator, 5
+studentout, 5
+elevator, 1
 studentin, 6
 studentout, 6
 elevator, 8
+elevator, 1
 elevatorwait
-studentup, 7, 1
+elevator, 3
+elevatorwait
 studentdown, 8, 2
-elevator, 1
-studentdown, 9, 5
-studentin, 7
-elevator, 5
-studentout, 7
-elevator, 5
-studentin, 9
 elevator, 2
-studentout, 9
-studentin, 8
-elevator, 5
-elevator, 2
-studentout, 8
 elevatorwait
-studentdown, 10, 6
-elevator, 6
-studentin, 10
+studentup, 9, 3
+elevator, 3
+studentin, 7
+elevator, 7
+studentout, 7
+elevatorwait
+studentup, 10, 7
+elevator, 7
+elevatorwait
+studentup, 11, 2
+elevator, 2
+elevatorwait
+elevator, 2
+studentin, 8
+studentout, 8
+elevator, 2
+elevatorwait
+studentup, 12, 3
+elevator, 3
+studentin, 9
+elevator, 8
+studentout, 9
+elevatorwait
+studentdown, 13, 8
+elevator, 8
+elevatorwait
+studentdown, 14, 1
 elevator, 1
+studentin, 14
+elevator, 0
+studentout, 14
+elevatorwait
+studentup, 20, 1
+studentdown, 19, 8
+studentup, 18, 5
+studentup, 17, 6
+studentup, 16, 4
+studentdown, 15, 2
+elevator, 4
+studentin, 16
+elevator, 5
+studentin, 18
+elevator, 6
+studentout, 18
+studentout, 16
+studentin, 17
+elevator, 9
+studentout, 17
+elevator, 8
+studentin, 13
+studentin, 19
+elevator, 2
+studentout, 19
+studentout, 13
+studentin, 15
+studentout, 15
+elevator, 2
+elevatorwait
+elevator, 2
+studentin, 11
+elevator, 4
+studentout, 11
+elevator, 9
+studentin, 1
+elevator, 1
+studentout, 1
+elevatorwait
+elevator, 1
+elevatorwait
+studentup, 21, 5
+elevator, 5
+elevatorwait
+studentdown, 22, 6
+elevator, 6
+elevatorwait
+studentdown, 23, 7
+elevator, 7
+elevatorwait
+elevator, 7
+studentin, 10
+elevator, 8
 studentout, 10
 elevatorwait
