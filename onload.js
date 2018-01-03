@@ -170,3 +170,19 @@ function peoplegetoutelevator(id) {
     opacity: 0
   })
 }
+
+
+function peoplereset() {
+  for(var i = 0;i < 40; i++) {
+    TweenLite.to("#people" + i, 0.1, {
+      opacity:0
+    })
+  }
+}
+
+function elevatorreset() {
+  TweenLite.to("#elevator", 0.1, {
+    opacity:0,
+    marginTop: elevatorbasic + (9-0) * 80
+  })
+}

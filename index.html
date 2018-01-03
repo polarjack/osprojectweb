@@ -125,8 +125,11 @@
       <button class="button" onclick="set3()" style="background-color: blueviolet">SET3</button>
       <button class="button" onclick="set4()" style="background-color: yellow">NEW</button>
       
+
       <button class="button" onclick="start()">START</button>
       <button class="button" onclick="stop()">STOP</button>
+      <button class="button" onclick="reset()">RESET</button>
+      
     </div>
     
   </div>
@@ -140,6 +143,17 @@
     else {
       alert("Running")
     }
+  }
+  function stop() {
+    stopinterval()
+    running = false;
+  }
+
+  function reset() {
+    stopinterval()
+    running = false;
+    peoplereset()
+    elevatorreset()
   }
   function set1() {
     stopinterval()
@@ -161,10 +175,7 @@
     todo = setting4;
   }
 
-  function stop() {
-    stopinterval()
-    running = false;
-  }
+  
 </script>
 
 
