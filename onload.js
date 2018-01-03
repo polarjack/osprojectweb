@@ -6,37 +6,42 @@ function onload() {
   console.log("onload")
 
   var i = 0;
-  console.log(todo.length)
   setelevatorposition();
   // peopleshow(0, 0)
   // peoplegetinelevator(0)
   // elevatorgoto(2)
   // peoplegetoutelevator(0);
   running = true;
+  
   setting = setInterval(() => {
     switch (todo[i][0]) {
       case 'elevatorwait':
         break;
       case 'studentdown':
+        console.log("studentdown")
         var who = Number(todo[i][1])
         var floor = Number(todo[i][2])
         peopleshow(who, floor, "down")
         break;
       case 'studentup':
+        console.log("studentup")
         var who = Number(todo[i][1])
         var floor = Number(todo[i][2])
         peopleshow(who, floor, "up")
         break;
       case 'elevator':
+        console.log("elevator")
         var floor = Number(todo[i][1])
         elevatorcurrent = floor
         elevatorgoto(floor)
         break;
       case 'studentout':
+        console.log("studentout")
         var who = Number(todo[i][1])
         peoplegetoutelevator(who);
         break;
       case 'studentin':
+        console.log("studentin")
         var who = Number(todo[i][1])
         peoplegetinelevator(who);
         break;

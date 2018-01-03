@@ -35,6 +35,10 @@
     <img src="./img/standing-up-man.png" alt="" id="people9" class="people">
     <img src="./img/standing-up-man.png" alt="" id="people10" class="people">
     <img src="./img/standing-up-man.png" alt="" id="people11" class="people">
+    <img src="./img/standing-up-man.png" alt="" id="people12" class="people">
+    <img src="./img/standing-up-man.png" alt="" id="people13" class="people">
+    <img src="./img/standing-up-man.png" alt="" id="people14" class="people">
+    <img src="./img/standing-up-man.png" alt="" id="people15" class="people">
     
     
     <img src="./img/elevator1.png" alt="" id="elevator" class="elevator">
@@ -92,20 +96,50 @@
     <br>
     <br>
     <div style="float: right;">
-      <button class="button" onclick="myfunction()">START</button>
+      <button class="button" onclick="set1()" style="background-color: blueviolet">SET1</button>
+      <button class="button" onclick="set2()" style="background-color: blueviolet">SET2</button>
+      <button class="button" onclick="set3()" style="background-color: blueviolet">SET3</button>
+      <button class="button" onclick="set4()" style="background-color: blueviolet">SET3</button>
+      
+      <button class="button" onclick="start()">START</button>
+      <button class="button" onclick="stop()">STOP</button>
     </div>
     
   </div>
   
 </body>
 <script>
-  function myfunction() {
+  function start() {
     if(running == false) {
       onload();
     }
     else {
       alert("Running")
     }
+  }
+  function set1() {
+    // stopinterval()
+    // running = false;
+    
+    todo = setting1;
+  }
+  function set2() {
+    // stopinterval()
+    // running = false;
+    todo = setting2;
+  }
+  function set3() {
+    // stopinterval()
+    // running = false;
+    todo = setting3;
+  }
+  function set4() {
+    todo = setting4;
+  }
+
+  function stop() {
+    stopinterval()
+    running = false;
   }
 </script>
 
