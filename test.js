@@ -18,6 +18,8 @@ rd.on('line', function(line) {
 
 
 setTimeout(() => {
+  var getin = ["end"]
+  output.push(getin)
   console.log(output)
 }, 3000);
 
